@@ -1,0 +1,65 @@
+<html>
+
+    <head>   
+
+        <title>Question 4</title>
+
+        <script>
+
+            function ViewJSON()
+            {
+                var textArea = document.getElementById("area");
+                var sJSON = textArea.value;
+
+                var object = JSON.parse(sJSON);
+
+                var sCode = document.getElementById("code");
+                sCode.value = object.code;
+
+                var sTitle = document.getElementById("title");
+                sTitle.value = object.title;
+
+                var sCp = document.getElementById("cp");
+                sCp.value = object.cp;
+
+                var cSubject = document.getElementById("core");
+                cSubject.checked = object.coreFlag;
+            }
+
+        </script>
+
+    </head>
+    
+    <body>
+        <textarea rows = "10" columns = "100" id = "area"></textarea>
+
+        <br />
+
+        <button onclick = "ViewJSON();">
+            Read JSON
+        </button>
+
+        <br />
+        <br />
+
+        Subject code:
+        <input type = "text" id = "code" />
+
+        <br /> 
+
+        Subject title:
+        <input type = "text" id = "title" />
+
+        <br /> 
+
+        Subject credit point:
+        <input type = "text" id = "cp" />
+
+        <br /> 
+
+        Core subject:
+        <input type = "checkbox" id = "core" />
+
+    </body>
+
+</html>
